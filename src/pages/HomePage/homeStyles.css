@@ -5,11 +5,12 @@
 }
 
 .products-list {
-    width: 100%;
+    width: calc(100% - 2rem);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
     margin-top: 3rem;
     max-width: 1300px;
+    padding: 1rem;
 }
