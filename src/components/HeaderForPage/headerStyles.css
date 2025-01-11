@@ -1,0 +1,123 @@
+.horizontal-menu {
+    width: 100%;
+    padding: 29px 0 25px
+}
+  
+body {
+    background-color: white;
+}
+
+.logo-container {
+    position: relative;
+}
+
+.horizontal-menu .logo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.searchbar-container {
+    position: absolute;
+    background-color: #454545;
+    height: 60px;
+    top: 0px;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    z-index: 3000;
+    animation: showSidebar 0.8s;
+}
+
+@keyframes showSidebar {
+    0% {
+        top: -60px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.searchbar-container input {
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.search-container {
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.homburger-button {
+    display: none;
+}
+
+.x-icon {
+    cursor: pointer;
+    margin-left: 5px;
+    color: #000000;
+    background-color: #FFF;
+    border: none;
+    padding: 9px;
+    border-radius: 5px;
+    width: 37px;
+    height: 37px;
+}
+
+.x-icon:hover {
+    background-color: #ff0000;
+    color:#fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .horizontal-menu .logo {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    
+    .searchbar-container {
+        z-index: 1000;
+        right: 150px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .searchbar-container {
+        top: 70px;
+        width: 90%;
+        margin: 0 auto;
+        right: initial;
+        padding: 0;        
+        animation: mobileShowSearch 0.8s;
+
+    }
+}
+
+@media screen and (max-width: 350px ){
+    .searchbar-container {
+        width: 90%;
+        right: initial;
+        padding: 0;
+    }
+}
+
+@keyframes mobileShowSearch {
+    0% {
+        right: -300px;
+    }
+    100% {
+        right: 30px;
+    }
+}

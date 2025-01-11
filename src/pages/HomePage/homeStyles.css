@@ -1,0 +1,15 @@
+.products-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 1300px;
+}
